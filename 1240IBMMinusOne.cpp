@@ -15,7 +15,7 @@ int main()
 		len=st.length();
 		int change;
 		for(int i=0;i<len;i++)
-		{
+		{	
 			change=st[i]-'A';
 			change=(change+1)%26;
 			st[i]='A'+change;
