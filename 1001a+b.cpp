@@ -1,12 +1,10 @@
 #include<iostream>
-using namespace std;
-
 int main()
 {
 	int a,b;
-	while(cin>>a>>b)
+	while(std::cin>>a>>b)
 	{
-		cout<<a+b<<endl;
+		std::cout<<a+b<<std::endl;
 	}
 	return 0;
 }
