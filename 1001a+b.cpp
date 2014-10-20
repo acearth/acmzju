@@ -6,5 +6,5 @@ int main()
 	{
 		std::cout<<a+b<<std::endl;
 	}
-	return 0
+	return 0;
 }
