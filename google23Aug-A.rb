@@ -61,9 +61,7 @@ Case #4: 0
 
 def getResult
   resultSeq=[1]
-  66.times do
-    resultSeq<<resultSeq[-1]*2
-  end
+  66.times {  resultSeq<<resultSeq[-1]*2 } ## fabunacci Sequence, fab(66) is large enough
   n=gets.chomp.to_i
   n.times do |i|
     k=gets.chomp.to_i
@@ -72,14 +70,11 @@ def getResult
 end
 
 def getSeq(i, centerSeq)
-  return 0 if i==1||i==2
-  return 1 if i==3
-  st=0
+  return i==3 ?  1:0 if i<4
   centerSeq.each_with_index do |r, j|
     return 0 if r==i
-    (st=j-1; break) if r>i
+    return 1 - getSeq(centerSeq[j-1]*2-i, centerSeq) if r>i
   end
-  return 1 - getSeq(centerSeq[st]*2-i, centerSeq)
 end
 
 getResult
